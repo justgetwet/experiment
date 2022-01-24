@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<main>
+  <article>
+    <div class="article-head">
+      <div>{% include icons/calendar.svg %}</div>
+      <h5>{{ page.date | date: "%d %B %Y"}}</h5>
+      <div>{% include icons/tag.svg %}</div>
+      <h5>{{ page.tags | join: " "}}</h5>
+    </div>
+    <h2>{{ page.title }}</h2>
+    {{ content }}
+  </article>
+  <nav>
+  {% include nav.html %}
+  </nav>
+</main>

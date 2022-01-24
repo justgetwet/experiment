@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<main>
+  {% if page.title != "Posts" %}
+    <div class="page-title">{{ page.title }}</div>
+  {% endif %}
+  {{ content }}
+</main>

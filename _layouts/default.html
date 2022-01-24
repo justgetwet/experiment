@@ -1,0 +1,24 @@
+<!-- <!DOCTYPE html> -->
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+     tex2jax: {
+     inlineMath: [['$', '$'] ],
+     displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+     }
+     });
+    </script>
+  </head>
+  <body>
+    {% include header.html %}
+    {{ content }}
+    <!-- {% include footer.html %} -->
+  </body>
+</html>

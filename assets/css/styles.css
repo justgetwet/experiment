@@ -1,0 +1,199 @@
+@import url(normalize.css);
+@import url(syntax.css);
+
+
+:root {
+  --backgroundColor: #ffffff;
+  --bodyColor: #000000;
+  /* --bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; */
+  --bodyFont: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  --codeFont: Inconsolata,Monaco, Consolas,"Courier New",Courier, monospace;
+
+  --purple: #4b3842;
+
+  --ghBorderColor: #d0d7de;
+  --ghBackgroundColor: #f8f8f8;
+
+  --fontSize-root: 16px;
+  --lineHeight-tight: 1.125rem;
+  --lineHeight-normal: 1.5rem;
+  --lineHeight-relaxed: 1.625rem;
+
+  --spacing-px: 1px;
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 1.5rem;
+  --spacing-4: 2rem;
+  --spacing-5: 2.5rem;
+  --spacing-6: 3rem;
+  --spacing-7: 3.5rem;
+  --spacing-8: 4rem;
+
+  --fontSize-1: 0.75rem;
+  --fontSize-2: 1rem;
+  --fontSize-3: 1.125rem;
+  --fontSize-4: 1.25rem;
+  --fontSize-5: 1.5rem;
+  --fontSize-6: 2rem;
+  --fontSize-7: 2.5rem;
+  --fontSize-8: 3rem;
+}
+
+/* HTML elements */
+
+html {
+  font-size: var(--fontSize-root);
+  line-height: var(--lineHeight-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--backgroundColor);
+  color: var(--bodyColor);
+  font-family: var(--bodyFont);
+}
+
+footer {
+  padding: var(--spacing-2) 0;
+}
+
+hr {
+  background: var(--ghBorderColor);
+  height: 1px;
+  border: 0;
+}
+
+/* Heading */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--bodyColor);
+  font-weight: bold;
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-2);
+}
+
+h1 {
+  font-size: var(--fontSize-6);
+}
+
+h2 {
+  font-size: var(--fontSize-5);
+}
+
+h3 {
+  font-size: var(--fontSize-4);
+}
+
+h4 {
+  font-size: var(--fontSize-3);
+}
+
+h5 {
+  font-size: var(--fontSize-2);
+}
+
+h6 {
+  font-size: var(--fontSize-1);
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Prose */
+
+a {
+  color: inherit;
+}
+
+ul,
+ol {
+  padding: var(--spacing-px);
+  margin: 0 0 var(--spacing-3) var(--spacing-3);
+}
+
+ul {
+  list-style-type: circle;
+}
+
+blockquote {
+  border-left: .5rem solid var(--ghBorderColor);
+  margin-left: .5rem;
+  padding: 0 0 0 .5rem;
+}
+
+p > code {
+  padding: 2px;
+  font-family: var(--codeFont);
+  font-size: var(--fontSize-2);
+  border: solid 1px var(--ghBorderColor);
+  border-radius: 4px;
+  background: var(--ghBackgroundColor);
+}
+
+code {
+  font-family: var(--codeFont);
+}
+
+pre {
+  border: solid 1px var(--ghBorderColor);
+  border-radius: 6px;
+  font-size: var(--fontSize-1);
+  line-height: var(--lineHeight-tight);
+  padding: var(--spacing-2) var(--spacing-2) 0;
+  overflow-x: scroll;
+}
+
+pre::-webkit-scrollbar {
+    width: calc(.6rem + 2px);
+}
+
+pre::-webkit-scrollbar-track {
+    margin: 1px;
+}
+pre::-webkit-scrollbar-corner {
+    display: none;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.1);
+    border-radius: 100px;
+    border: solid transparent;
+    background-clip: content-box;
+    border-width: 1px 2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid var(--bodyColor);
+}
+
+th {
+  background: var(--ghBackgroundColor);
+}
+
+td {
+  padding: 0 var(--spacing-1);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  /* width: 100%; */
+}
