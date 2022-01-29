@@ -2,13 +2,17 @@
 layout: page
 ---
 
+<div class="posts_head">
+  {% include icons/home.svg %}
+  <h3>Latest Posts</h3>
+</div>
 {% for post in site.posts %}
   <aside>
     <div class="article-head">
       <div>{% include icons/calendar.svg %}</div>
-      <h5>{{ post.date | date: "%d %B %Y"}}</h5>
+      <h4>{{ post.date | date: "%d %B %Y"}}</h4>
       <div>{% include icons/tag.svg %}</div>
-      <h5>{{ post.tags | join: " "}}</h5>
+      <h4>{{ post.tags | join: " "}}</h4>
     </div>
     <h3>
       <div class="post-title">
@@ -19,5 +23,5 @@ layout: page
       {{ post.excerpt }}
     </div>
     <hr />
-  </aside>  
+  </aside>
 {% endfor %}

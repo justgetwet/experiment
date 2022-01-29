@@ -3,8 +3,11 @@ layout: default
 ---
 
 <main>
-  {% if page.title != "Posts" %}
+  <!-- {% if page.title != "Posts" %}
     <div class="page-title">{{ page.title }}</div>
-  {% endif %}
+  {% endif %} -->
   {{ content }}
+  <footer>
+    {% include footer.html %}
+  </footer>
 </main>

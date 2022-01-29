@@ -43,7 +43,7 @@
 
 html {
   font-size: var(--fontSize-root);
-  line-height: var(--lineHeight-normal);
+  line-height: var(--lineHeight-relaxed);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,8 +74,8 @@ h5,
 h6 {
   color: var(--bodyColor);
   font-weight: bold;
-  margin-top: var(--spacing-3);
-  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
 }
 
 h1 {
@@ -195,5 +195,6 @@ td {
 img {
   display: block;
   margin: 0 auto;
+  padding: var(--spacing-2) 0;
   /* width: 100%; */
 }

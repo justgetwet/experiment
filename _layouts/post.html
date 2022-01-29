@@ -5,9 +5,9 @@ layout: default
   <article>
     <div class="article-head">
       <div>{% include icons/calendar.svg %}</div>
-      <h5>{{ page.date | date: "%d %B %Y"}}</h5>
+      <h4>{{ page.date | date: "%d %B %Y"}}</h4>
       <div>{% include icons/tag.svg %}</div>
-      <h5>{{ page.tags | join: " "}}</h5>
+      <h4>{{ page.tags | join: " "}}</h4>
     </div>
     <h2>{{ page.title }}</h2>
     {{ content }}
@@ -15,4 +15,7 @@ layout: default
   <nav>
   {% include nav.html %}
   </nav>
+  <footer>
+    {% include footer.html %}
+  </footer>
 </main>
