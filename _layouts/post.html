@@ -3,14 +3,16 @@ layout: default
 ---
 <main>
   <article>
-    <div class="article-head">
-      <div>{% include icons/calendar.svg %}</div>
-      <h4>{{ page.date | date: "%d %B %Y"}}</h4>
-      <div>{% include icons/tag.svg %}</div>
-      <h4>{{ page.tags | join: " "}}</h4>
-    </div>
-    <h2>{{ page.title }}</h2>
-    {{ content }}
+    <section>
+      <div class="article-head">
+        <div>{% include icons/calendar.svg %}</div>
+        <h4>{{ page.date | date: "%d %B %Y"}}</h4>
+        <div>{% include icons/tag.svg %}</div>
+        <h4>{{ page.tags | join: " "}}</h4>
+      </div>
+      <h2>{{ page.title }}</h2>
+        {{ content }}
+    </section>
   </article>
   <nav>
   {% include nav.html %}

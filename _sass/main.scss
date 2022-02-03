@@ -15,7 +15,8 @@ $headerFont: Calibri, Candara, Segoe, "Segoe U", Optima, Arial, sans-serif; // C
 // $bgImage: "https://source.unsplash.com/random/1800x900";
 $blue: #092237;
 $gray: #3b3b3b;
-$lightgray: #e6e5ef;
+// $lightgray: #e6e5ef;
+$lightgray: #faf9fb;
 
 // heroicons
 .h-6, .w-6 {
@@ -42,6 +43,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: row;
+  background-color: $lightgray;
 }
 
 header {
@@ -97,16 +99,14 @@ header {
 
 main {
   // flex: 1;
-  padding: calc(6rem - 2px - 2rem) var(--spacing-4);
+  display: table;
+  background-color: #fff;
+  padding: calc(6rem - 2rem) var(--spacing-4) 0;
   width: 46rem;
-  // .page-title {
-  //   margin: 0;
-  //   font-size: var(--fontSize-4);
-  //   font-weight: bold;
-  // }
 }
 
 aside {
+  background-color: #fff;
   h3 {
     margin-top: var(--spacing-2);
   }
@@ -131,6 +131,7 @@ aside {
 
 .posts_head {
   display: flex;
+
   padding-bottom: var(--spacing-4);
   h3 {
     margin: 0 var(--spacing-1);
@@ -141,6 +142,7 @@ aside {
 
 .article-head {
   display: flex;
+  align-items: center;
   h4 {
     margin: 0 var(--spacing-1);
     font-family: $headerFont;
@@ -149,9 +151,17 @@ aside {
 }
 
 article {
+  background-color: #fff;
+  // min-height: 100%;
   h2 {
     margin-bottom: var(--spacing-3);
   }
+  pre {
+    max-width: 44rem; // ?
+  }
+}
+
+section {
   h3 {
       border-bottom: 1px solid #dddddd;
     }
@@ -179,9 +189,12 @@ article {
 // main > hr:nth-child(2) {
 //   background: #4b3842;
 // }
+// nav {
+//   min-height: 100%;
+// }
 
 footer {
-
+  // min-height: 100%;
   h4 {
     font-family: $headerFont;
     color: $gray;
